@@ -14,11 +14,14 @@ def hello_world():
     # Return JSON body
     return jsonify(body='Land')
 
-# Taking input body test
+# Final PUT endpoint
 @app.route('/', methods=['PUT'])
 def string_flip():
-    my_return = request.args.get('input')
-    return jsonify(body=my_return), 200
+    put_input = request.args.get('input')
+    # Reverse using slicing
+    body_output = put_input[::-1]
+    # Return reversed string
+    return jsonify(body=body_output), 200
 
 # Run Code
 if __name__ == '__main__':
