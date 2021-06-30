@@ -2,9 +2,7 @@
 
 # We could probably just use sockets but for ease of use we will use flask to serve, and since the requirements
 # require json interaction we will import jsonify as well
-from flask import Flask
-from flask import jsonify
-from flask import request
+from flask import Flask, jsonify, request
 
 # Instatiate flask server
 app = Flask(__name__)
