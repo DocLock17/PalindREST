@@ -14,6 +14,12 @@ def hello_world():
     # Return JSON body
     return jsonify(body='Land')
 
+# Taking input body test
+@app.route('/', methods=['PUT'])
+def string_flip():
+    my_return = request.args.get('input')
+    return jsonify(body=my_return), 200
+
 # Run Code
 if __name__ == '__main__':
     app.run()
